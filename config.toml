@@ -1,6 +1,6 @@
 # Page settings
 
-baseURL = "http://cv.joseoc.com/"
+baseURL = "https://jose-oc.github.io/cv.joseoc.com/"
 languageCode = "en-us"
 title = "Jose Ortiz - CV"
 theme = "hugo-orbit-theme"

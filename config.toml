@@ -7,9 +7,7 @@ theme = "hugo-orbit-theme"
 # googleAnalytics = "UA-XXXXXXX-Y"
 
 # Do not build files for websites. Need them? Set to false
-disableRSS = true
-disableSitemap = true
-disable404 = true
+disableKinds=["404", "RSS", "sitemap"]
 
 # To build the project into this folder (docs is the one used by github to create the static website)
 publishDir = "docs"

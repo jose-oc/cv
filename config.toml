@@ -1,9 +1,242 @@
+# Page settings
+
 baseURL = "http://cv.joseoc.com/"
 languageCode = "en-us"
 title = "Jose Ortiz - CV"
-
 theme = "hugo-orbit-theme"
+# googleAnalytics = "UA-XXXXXXX-Y"
+
+# Do not build files for websites. Need them? Set to false
+disableRSS = true
+disableSitemap = true
+disable404 = true
 
 # To build the project into this folder (docs is the one used by github to create the static website)
 publishDir = "docs"
 
+[params]
+
+# Meta
+    description = "Jose Ortiz developer Resume/CV"
+    author = "Jose Ortiz"
+
+# Theme styles
+
+    # The original template comes with 6 colour schemes. You may choose styles below.
+    # "styles.css", "styles-2.css", "styles-3.css", "styles-4.css", "styles-5.css", "styles-6.css"
+    # are available. Also the source LESS files are included so
+    # it’s quick and easy to change the styling and colour scheme.
+
+    styles = "styles.css"
+
+# Sidebar sections
+
+    # Profile section
+    [params.profile]
+        name = "Jose Ortiz"
+        tagline = "Backend Developer"
+        avatar = "profile.png"
+
+    # Contact section
+    [params.contact]
+        enable = true
+
+        [[params.contact.list]]
+        class = "email"
+        icon = "fa-envelope"
+        url = "mailto: jose.oc+developer@gmail.com"
+        title = "jose.oc@gmail.com"
+
+        # [[params.contact.list]]
+        # class = "phone"
+        # icon = "fa-phone"
+        # url = "tel:+1234567890"
+        # title = "+1234567890"
+
+        [[params.contact.list]]
+        class = "website"
+        icon = "fa-globe"
+        url = "//joseoc.com"
+        title = "joseoc.com"
+
+        [[params.contact.list]]
+        class = "linkedin"
+        icon = "fa-linkedin"
+        url = "//linkedin.com/in/joseoc"
+        title = "linkedin.com/in/joseoc"
+
+        [[params.contact.list]]
+        class = "github"
+        icon = "fa-github"
+        url = "//github.com/jose-oc"
+        title = "github.com/jose-oc"
+
+        [[params.contact.list]]
+        class = "twitter"
+        icon = "fa-twitter"
+        url = "//twitter.com/_jose_oc"
+        title = "@_jose_oc"
+
+    # Education section
+    [params.education]
+        enable = true
+        title = "Education"
+
+        [[params.education.list]]
+        degree = "MSc in Computer Science"
+        college = "University of Málaga"
+        #dates = "2006 - 2010"
+
+    # Languages section
+    [params.language]
+        enable = true
+        title = "Languages"
+
+        [[params.language.list]]
+        language = "English"
+        level = "Professional"
+
+        [[params.language.list]]
+        language = "Spanish"
+        level = "Native"
+
+    # Interests section
+    [params.interests]
+        enable = true
+        title = "Interests"
+
+        [[params.interests.list]]
+        interest = "Education"
+
+        [[params.interests.list]]
+        interest = "Music"
+
+        [[params.interests.list]]
+        interest = "Photography"
+
+# Main body sections
+
+    # You may use markdown in summary, details and intro fields. But don't overdose, it's resume!:)
+
+    # Summary section
+    [params.summary]
+        enable = true
+        icon = "fa-user"
+        title = "Career Profile"
+        summary = "**Software engineer** with more than fifteen years of experience in the development of **backend and web applications** mainly in the **Java EE** environment but also with some other script languages and tools. I've worked being part of a team and also independently with projects of different sizes.\n\nQuite interested in Software Quality which involves code review, Test Driven Development (TDD/BDD), Performance, Monitoring and so on; as well as in Continuous Integration and Delivery.\n\n - *Methodologies*: Clean Code, Design Patterns, Agile (kanban, sprints).\n- *Languages*: Java, Python, PHP, NodeJS, HTML5.\n- *Frameworks*: Apache Flink, Spring, OpenXava, JUnit, Mockito, Cucumber, Hibernate.\n- *Infrastructure*: Docker, AWS, Mesos.\n- *Tools*: Git, Maven, ant, kibana (elastic search), RabbitMQ, MuleESB, GoCD, Jasper Reports, Jira, Redmine.\n- *DB*: PostgreSQL, MongoDB, Cassandra, Oracle, MSSQL, MySql."
+
+    # Experiences section
+    [params.experiences]
+        enable = true
+        icon = "fa-briefcase"
+        title = "Experiences"
+
+        [[params.jobs.list]]
+        position = "Java Senior Developer"
+        dates = "2015 - Present"
+        company = "Piksel, Málaga (Spain)"
+        details = "Piksel has been building successful online video businesses for over a decade. Our offering of strategic, professional and managed services is underpinned by the Piksel Palette’s SaaS-based infrastructure. It’s this recipe, combined with our commitment to creating mutually beneficial partnerships, that enables our media and entertainment clients to prosper in today’s video market.\n\n Piksel’s unrivaled expertise is in designing, building, and managing online video solutions for the likes of AT&T, Sky, Channel 4, Liberty Global, Mediaset, OSN and Transavia. Headquartered in New York City, Piksel offices can be found throughout Europe and the Americas."
+
+        [[params.jobs.list]]
+        position = "Senior Developer"
+        dates = "2013 - 2015"
+        company = "Acción Viajes, Málaga (Spain)"
+        details = "**Senior developer** for a cruises booking online business working with script languages such as PHP and bash and Relational databases. I develop a role of working on both frontend and backend building SOAP webservices."
+
+        [[params.jobs.list]]
+        position = "Free developer"
+        dates = "2010 - Present"
+        company = "Málaga (Spain)"
+        details = "**Describe your role here** Genetix, Vyoleta lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem."
+
+        [[params.jobs.list]]
+        position = "Senior developer"
+        dates = "2003 - 2009"
+        company = "Ingenia, Málaga (Spain)"
+        details = "I worked as a developer in a variety of projects using a wide range of technologies (Java EE, Oracle, Microsoft SQL Server, PowerBuilder, Hibernate) and being in contact with the customers."
+
+    # Projects section
+    [params.projects]
+        enable = true
+        icon = "fa-archive"
+        title = "Projects"
+        intro = "A brief description of some of the projects I developped as a contractor/freelance."
+
+        [[params.projects.list]]
+        title = "Piksel Palette"
+        url = "https://piksel.com"
+        tagline = "Being part of an excellent team and based on an **agile** methodology and following a **continuous integration** pipeline and **continuous delivery**, I've been envolved in the development of different pieces of Software to work with video related contents from encoding, transcoding and encrypting video asset in the main technologies such as HLS, DASH and Smooth Streaming as well as processing huge files with meta-information related to the videos which is ingested into a system in an incredibly fast way. The main characteristics of this Software is its reliability and scalability.\n\n Some of the technologies we've used are: \n\n - Java EE and Python \n\n - RabbitMQ \n\n - MuleESB \n\n - Apache Flink & Kafka \n\n - Microservices architecture"
+
+        [[params.projects.list]]
+        title = "Laboratory Information Management System"
+        #url = "https://github.com/aerohub/hugrid"
+        tagline = "Working on my own I developped a LIMS (Laboratory Information Management System) Software for a Spanish company from scratch.\n\n It was written using these technologies:\n\n- J2EE / JPA \n- Hibernate \n- Spring Security \n- Jasper Reports \n- PosgreSQL / PL/pgSQL"
+
+        [[params.projects.list]]
+        title = "Online ink shop"
+        #url = "https://github.com/aerohub/hugo-identity-theme"
+        tagline = "Using *Prestashop* I wrote an online shop to sell printer ink."
+
+    # Skills section
+    [params.skills]
+        enable = true
+        icon = "fa-rocket"
+        title = "Skills & Proficiency"
+
+        [[params.skills.list]]
+        skill = "Java EE"
+        level = "98%"
+
+        [[params.skills.list]]
+        skill = "Python & PHP"
+        level = "75%"
+
+        [[params.skills.list]]
+        skill = "PostgreSQL & MySQL"
+        level = "90%"
+
+        [[params.skills.list]]
+        skill = "Mongo & Cassandra"
+        level = "80%"
+
+        [[params.skills.list]]
+        skill = "git"
+        level = "90%"
+
+        [[params.skills.list]]
+        skill = "Docker & AWS"
+        level = "80%"
+
+        [[params.skills.list]]
+        skill = "RabbitMQ"
+        level = "80%"
+
+        [[params.skills.list]]
+        skill = "Elastic search - Kibana"
+        level = "70%"
+
+        [[params.skills.list]]
+        skill = "Apache Flink & Kafka"
+        level = "70%"
+
+        [[params.skills.list]]
+        skill = "Javascript & jQuery"
+        level = "60%"
+
+        [[params.skills.list]]
+        skill = "Ruby & Node.js"
+        level = "60%"
+
+
+    # Footer section
+
+    # The original template is released under the Creative Commons Attribution 3.0 License.
+    # Please keep the original attribution link when using for your own project.
+    # If you'd like to use the template without the attribution,
+    # you can check out other license options via template author's website: themes.3rdwavemedia.com
+    # 
+    # As for Hugo port you may rewrite the "Ported for..." line with setting your name below.
+
+    [params.footer]
+    	copyright = ""
+        #copyright = "2017 © Ported for Jose by Pavel Kanyshev"

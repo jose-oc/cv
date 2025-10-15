@@ -43,6 +43,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           # The name of the artifact to be uploaded.
-          name: CV-PDF
+          name: CV-Jose-Ortiz
           # The path to the file to upload.
           path: cv-Jose-Ortiz.pdf

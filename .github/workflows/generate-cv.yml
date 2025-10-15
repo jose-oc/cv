@@ -21,7 +21,7 @@ jobs:
     steps:
       # This action checks-out your repository under $GITHUB_WORKSPACE, so your job can access it.
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       # Convert Markdown to PDF using the pandoc/extra Docker image.
       # This image is 'batteries-included' and contains the Eisvogel template and a full LaTeX engine.

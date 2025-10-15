@@ -18,6 +18,9 @@ jobs:
     # The type of runner that the job will run on.
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write  # required for creating releases and uploading assets
+
     steps:
       # This action checks-out your repository under $GITHUB_WORKSPACE, so your job can access it.
       - name: Checkout repository
@@ -46,3 +49,25 @@ jobs:
           name: CV-Jose-Ortiz
           # The path to the file to upload.
           path: cv-Jose-Ortiz.pdf
+
+
+      - name: Create or update 'latest' release with date
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          DATE=$(date -u +"%Y-%m-%d %H:%M UTC")
+
+          if gh release view latest >/dev/null 2>&1; then
+            echo "Release 'latest' exists — deleting old asset..."
+            gh release delete-asset latest cv-Jose-Ortiz.pdf -y >/dev/null 2>&1 || true
+            gh release edit latest --title "Latest CV (updated ${DATE})" --notes "Last updated: ${DATE}"
+          else
+            echo "Creating new 'latest' release..."
+            gh release create latest \
+              --title "Latest CV (updated ${DATE})" \
+              --notes "Last updated: ${DATE}"
+          fi
+
+          echo "Uploading new PDF..."
+          gh release upload latest cv-Jose-Ortiz.pdf --clobber

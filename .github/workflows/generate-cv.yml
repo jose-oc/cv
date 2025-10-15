@@ -21,7 +21,7 @@ jobs:
     steps:
       # This action checks-out your repository under $GITHUB_WORKSPACE, so your job can access it.
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       # Convert Markdown to PDF using the pandoc/extra Docker image.
       # This image is 'batteries-included' and contains the Eisvogel template and a full LaTeX engine.
@@ -34,7 +34,7 @@ jobs:
             --volume "$(pwd):/data" \
             --user "$(id -u):$(id -g)" \
             pandoc/extra:latest \
-            cv.md -o "cv-Jose-Ortiz.pdf" --from markdown --pdf-engine=xelatex --template=eisvogel
+            cv.md -o "cv-Jose-Ortiz.pdf" --from markdown --template=eisvogel
 
       # Upload the generated PDF as a workflow artifact.
       # This action uploads files from your workflow, allowing you to share data between jobs
@@ -43,6 +43,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           # The name of the artifact to be uploaded.
-          name: CV-PDF
+          name: CV-Jose-Ortiz
           # The path to the file to upload.
           path: cv-Jose-Ortiz.pdf

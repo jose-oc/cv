@@ -34,7 +34,7 @@ jobs:
             --volume "$(pwd):/data" \
             --user "$(id -u):$(id -g)" \
             pandoc/extra:latest \
-            cv.md -o "cv-Jose-Ortiz.pdf" --from markdown --pdf-engine=xelatex --template=eisvogel
+            cv.md -o "cv-Jose-Ortiz.pdf" --from markdown --template=eisvogel
 
       # Upload the generated PDF as a workflow artifact.
       # This action uploads files from your workflow, allowing you to share data between jobs

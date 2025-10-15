@@ -1,0 +1,58 @@
+
+# GitHub Actions Workflow: Generate CV from Markdown to PDF using Pandoc
+
+name: Generate CV PDF
+
+# Controls when the action will run.
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'cv.md'
+  workflow_dispatch:
+
+
+jobs:
+  build-pdf:
+    # The type of runner that the job will run on.
+    runs-on: ubuntu-latest
+
+    steps:
+      # This action checks-out your repository under $GITHUB_WORKSPACE, so your job can access it.
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Download and extract the Pandoc LaTeX template.
+      # This downloads the latest Eisvogel template archive, extracts it,
+      # and copies the correct .latex file to the root for Pandoc to use.
+      - name: Download and set up Pandoc LaTeX template
+        run: |
+          wget https://github.com/Wandmalfarbe/pandoc-latex-template/releases/latest/download/Eisvogel.tar.gz
+          tar -xvf Eisvogel.tar.gz
+          cp Eisvogel-*/eisvogel.latex .
+
+      # Convert Markdown to PDF using Pandoc in a Docker container.
+      # This uses a pre-built Docker image that contains Pandoc and a full LaTeX distribution.
+      # Using Docker is faster and more reliable than installing these large dependencies directly.
+      # --volume: Mounts the current directory (containing cv.md and the template) into the container.
+      # --user: Ensures the output file is owned by the runner user, preventing permission issues.
+      # The pandoc command converts the markdown file to PDF using the specified engine and template.
+      - name: Convert Markdown to PDF
+        run: |
+          docker run --rm \
+            --volume "$(pwd):/data" \
+            --user "$(id -u):$(id -g)" \
+            pandoc/latex:latest \
+            pandoc cv.md -o "cv-Jose-Ortiz.pdf" --from markdown --pdf-engine=xelatex --template=eisvogel.latex
+
+      # Upload the generated PDF as a workflow artifact.
+      # This action uploads files from your workflow, allowing you to share data between jobs
+      # and store results once a workflow is complete.
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          # The name of the artifact to be uploaded.
+          name: CV-PDF
+          # The path to the file to upload.
+          path: cv-Jose-Ortiz.pdf

@@ -1,10 +1,9 @@
 ---
 title: "Jose Ortiz — DevOps Engineer | Cloud Automation | Python Developer"
-author: "Jose Ortiz Castaño"
+author: "Jose Ortiz"
 subtitle: "DevOps Engineer with 5+ years of experience building automation, cloud infrastructure, and Python-based tooling for scalable, reliable systems."
 # date: "2025-10-14"
 email: "jose.oc@gmail.com"
-phone: "+34 605 343 870"
 location: "Málaga, Spain (Remote)"
 lang: "en"
 titlepage: true
@@ -24,8 +23,8 @@ header-includes:
   - \RedeclareSectionCommand[afterskip=0.3em]{subsection}
 ...
 
-# Jose Ortiz Castaño
-Málaga, Spain · Remote · jose.oc@gmail.com · +34 605 343 870  
+# Jose Ortiz
+Málaga, Spain · Remote · jose.oc@gmail.com
 LinkedIn: [linkedin.com/in/joseoc](https://www.linkedin.com/in/joseoc) · GitHub: [github.com/jose-oc](https://github.com/jose-oc)
 
 ---

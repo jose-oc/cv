@@ -61,11 +61,11 @@ jobs:
           if gh release view latest >/dev/null 2>&1; then
             echo "Release 'latest' exists — deleting old asset..."
             gh release delete-asset latest cv-Jose-Ortiz.pdf -y >/dev/null 2>&1 || true
-            gh release edit latest --title "Latest CV (updated ${DATE})" --notes "Last updated: ${DATE}"
+            gh release edit latest --title "Latest CV" --notes "Last updated: ${DATE}"
           else
             echo "Creating new 'latest' release..."
             gh release create latest \
-              --title "Latest CV (updated ${DATE})" \
+              --title "Latest CV" \
               --notes "Last updated: ${DATE}"
           fi
 

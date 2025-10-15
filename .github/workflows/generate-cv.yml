@@ -23,28 +23,18 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Download and extract the Pandoc LaTeX template.
-      # This downloads the latest Eisvogel template archive, extracts it,
-      # and copies the correct .latex file to the root for Pandoc to use.
-      - name: Download and set up Pandoc LaTeX template
-        run: |
-          wget https://github.com/Wandmalfarbe/pandoc-latex-template/releases/latest/download/Eisvogel.tar.gz
-          tar -xvf Eisvogel.tar.gz
-          cp Eisvogel-*/eisvogel.latex .
-
-      # Convert Markdown to PDF using Pandoc in a Docker container.
-      # This uses a pre-built Docker image that contains Pandoc and a full LaTeX distribution.
-      # Using Docker is faster and more reliable than installing these large dependencies directly.
-      # --volume: Mounts the current directory (containing cv.md and the template) into the container.
+      # Convert Markdown to PDF using the pandoc/extra Docker image.
+      # This image is 'batteries-included' and contains the Eisvogel template and a full LaTeX engine.
+      # This removes the need for a separate template download step.
+      # --volume: Mounts the current directory (containing cv.md) into the container.
       # --user: Ensures the output file is owned by the runner user, preventing permission issues.
-      # The pandoc command converts the markdown file to PDF using the specified engine and template.
       - name: Convert Markdown to PDF
         run: |
           docker run --rm \
             --volume "$(pwd):/data" \
             --user "$(id -u):$(id -g)" \
-            pandoc/latex:latest \
-            pandoc cv.md -o "cv-Jose-Ortiz.pdf" --from markdown --pdf-engine=xelatex --template=eisvogel.latex
+            pandoc/extra:latest \
+            pandoc cv.md -o "cv-Jose-Ortiz.pdf" --from markdown --template=eisvogel
 
       # Upload the generated PDF as a workflow artifact.
       # This action uploads files from your workflow, allowing you to share data between jobs

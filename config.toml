@@ -58,12 +58,6 @@ publishDir = "docs"
         # title = "+1234567890"
 
         [[params.contact.list]]
-        class = "website"
-        icon = "fa-globe"
-        url = "//joseoc.com"
-        title = "joseoc.com"
-
-        [[params.contact.list]]
         class = "linkedin"
         icon = "fa-linkedin"
         url = "//linkedin.com/in/joseoc"

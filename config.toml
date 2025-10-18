@@ -15,7 +15,7 @@ publishDir = "docs"
 [params]
 
 # Meta
-    description = "Jose Ortiz developer Resume/CV"
+    description = "Jose Ortiz devops/platform engineer"
     author = "Jose Ortiz"
 
 # Theme styles
@@ -32,12 +32,18 @@ publishDir = "docs"
     # Profile section
     [params.profile]
         name = "Jose Ortiz"
-        tagline = "Backend Developer"
+        tagline = "DevOps/Platform Engineer"
         avatar = "profile.png"
 
     # Contact section
     [params.contact]
         enable = true
+
+#        [[params.contact.list]]
+#        class = "email"
+#        icon = "fa-envelope"
+#        url = "mailto:@gmail.com"
+#        title = "@gmail.com"
 
         [[params.contact.list]]
         class = "email"
@@ -81,9 +87,14 @@ publishDir = "docs"
         title = "Education"
 
         [[params.education.list]]
-        degree = "MSc in Computer Science"
+        degree = "Bachelor's Degree in Computer Engineering"
         college = "University of Málaga"
-        #dates = "2006 - 2010"
+        #dates = "2000 - 2005"
+
+        [[params.education.list]]
+        degree = "Master's Degree in Secondary Education"
+        college = "University of Málaga"
+        #dates = "2011 - 2012"
 
     # Languages section
     [params.language]
@@ -92,7 +103,7 @@ publishDir = "docs"
 
         [[params.language.list]]
         language = "English"
-        level = "Professional"
+        level = "B2"
 
         [[params.language.list]]
         language = "Spanish"
@@ -121,7 +132,7 @@ publishDir = "docs"
         enable = true
         icon = "fa-user"
         title = "Career Profile"
-        summary = "**Software engineer** with more than fifteen years of experience in the development of **backend and web applications** mainly in the **Java EE** environment but also with some other script languages and tools. I've worked being part of a team and also independently with projects of different sizes.\n\nQuite interested in Software Quality which involves code review, Test Driven Development (TDD/BDD), Performance, Monitoring and so on; as well as in Continuous Integration and Delivery.\n\n - *Methodologies*: Clean Code, Design Patterns, Agile (kanban, sprints).\n- *Languages*: Java, Python, PHP, NodeJS, HTML5.\n- *Frameworks*: Apache Flink, Spring, OpenXava, JUnit, Mockito, Cucumber, Hibernate.\n- *Infrastructure*: Docker, AWS, Mesos.\n- *Tools*: Git, Maven, ant, kibana (elastic search), RabbitMQ, MuleESB, GoCD, Jasper Reports, Jira, Redmine.\n- *DB*: PostgreSQL, MongoDB, Cassandra, Oracle, MSSQL, MySql."
+        summary = "20+ years working in It, working the latest 5 as DevOps Engineer building automation, cloud infrastructure, and Python-based tooling for scalable, reliable systems. Bridges development and operations by creating CLI tools, Lambda functions, and CI/CD integrations that simplify workflows and eliminate manual steps. Experienced with AWS, Kubernetes, Terraform, Ansible, and Python — passionate about automating everything from infrastructure provisioning to documentation generation."
 
     # Experiences section
     [params.experiences]
@@ -130,50 +141,41 @@ publishDir = "docs"
         title = "Experiences"
 
         [[params.jobs.list]]
-        position = "Java Senior Developer"
-        dates = "2015 - Present"
-        company = "Piksel, Málaga (Spain)"
-        details = "Piksel has been building successful online video businesses for over a decade. Our offering of strategic, professional and managed services is underpinned by the Piksel Palette’s SaaS-based infrastructure. It’s this recipe, combined with our commitment to creating mutually beneficial partnerships, that enables our media and entertainment clients to prosper in today’s video market.\n\n Piksel’s unrivaled expertise is in designing, building, and managing online video solutions for the likes of AT&T, Sky, Channel 4, Liberty Global, Mediaset, OSN and Transavia. Headquartered in New York City, Piksel offices can be found throughout Europe and the Americas."
+        position = "DevOps / Platform Engineer"
+        dates = "Nov 2022 - Present"
+        company = "NEP Group, Málaga (Spain)"
+        details = "Automated deployment and configuration of infrastructure and observability stacks on Kubernetes using Ansible, reducing setup time from days to under an hour. Developed Python scripts integrated into GitHub Actions to sync Docker images and Helm charts with a private Google Artifact Registry, ensuring reliable artifact availability. Created Python CLI tools to automate internal workflows: syncing Ansible inventory with 1Password and generating scaffolding. Generating Confluence documentation from HTML templates and inventory variables. Designed and implemented cost-optimization automation for AWS (EC2, ECS, RDS, and Lambda): instance rightsizing, spot-instance usage, automated environment startup/shutdown. Built runbooks for recurring incidents, improving on-call efficiency and response consistency. Managed 30+ distributed datacenters, each with multiple Kubernetes nodes and VMs, ensuring observability and stability across all environments."
 
         [[params.jobs.list]]
-        position = "Senior Developer"
-        dates = "2013 - 2015"
-        company = "Acción Viajes, Málaga (Spain)"
-        details = "**Senior developer** for a cruises booking online business working with script languages such as PHP and bash and Relational databases. I develop a role of working on both frontend and backend building SOAP webservices."
+        position = "Lead Developer / DevOps Engineer"
+        dates = "Mar 2015 - Nov 2022"
+        company = "Piksel Inc, Málaga (Spain)"
+        details = "Led a cross-functional team of six developers and DevOps engineers building a distributed Python-based workflow platform (similar to N8N) to process large-scale media workloads on AWS. Designed modular Python libraries for transcoding videos, generating metadata, processing subtitles, and analyzing video content — connected via standardized inputs/outputs for composable workflows. Used pytest for testing, boto3 for AWS interactions, and Terraform for infrastructure provisioning. Developed a Lambda function to manage AWS RDS startup/shutdown via schedule or manual triggers from GoCD pipelines, optimizing costs and reducing idle usage. Created and maintained Terraform CI/CD pipelines using GoCD and GitLab CI for continuous infrastructure delivery. Collaborated with developers to integrate observability and logging, leveraging ElasticSearch/Kibana for debugging and performance insights. Achieved 15% operational cost reduction by automating provisioning and improving resource utilization."
 
         [[params.jobs.list]]
-        position = "Free developer"
-        dates = "2010 - Present"
-        company = "Málaga (Spain)"
-        details = "**Describe your role here** Genetix, Vyoleta lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem."
-
-        [[params.jobs.list]]
-        position = "Senior developer"
-        dates = "2003 - 2009"
-        company = "Ingenia, Málaga (Spain)"
-        details = "I worked as a developer in a variety of projects using a wide range of technologies (Java EE, Oracle, Microsoft SQL Server, PowerBuilder, Hibernate) and being in contact with the customers."
+        position = "Software Developer / Backend Engineer"
+        dates = "Earlier experience"
+        company = "Various companies"
+        details = "Worked as a software developer and backend engineer across multiple projects using Java, Python, and PHP. Developed enterprise and web systems for clients in media and education sectors, gaining a strong foundation in clean coding and system design."
 
     # Projects section
     [params.projects]
         enable = true
         icon = "fa-archive"
         title = "Projects"
-        intro = "A brief description of some of the projects I developped as a contractor/freelance."
+        intro = "Selected projects from my professional experience."
 
         [[params.projects.list]]
-        title = "Piksel Palette"
-        url = "https://piksel.com"
-        tagline = "Being part of an excellent team and based on an **agile** methodology and following a **continuous integration** pipeline and **continuous delivery**, I've been envolved in the development of different pieces of Software to work with video related contents from encoding, transcoding and encrypting video asset in the main technologies such as HLS, DASH and Smooth Streaming as well as processing huge files with meta-information related to the videos which is ingested into a system in an incredibly fast way. The main characteristics of this Software is its reliability and scalability.\n\n Some of the technologies we've used are: \n\n - Java EE and Python \n\n - RabbitMQ \n\n - MuleESB \n\n - Apache Flink & Kafka \n\n - Microservices architecture"
+        title = "CI/CD + Python Integration"
+        tagline = "GitHub Actions automation to manage internal registries, including syncing Docker images and Helm charts with a private Google Artifact Registry."
 
         [[params.projects.list]]
-        title = "Laboratory Information Management System"
-        #url = "https://github.com/aerohub/hugrid"
-        tagline = "Working on my own I developped a LIMS (Laboratory Information Management System) Software for a Spanish company from scratch.\n\n It was written using these technologies:\n\n- J2EE / JPA \n- Hibernate \n- Spring Security \n- Jasper Reports \n- PosgreSQL / PL/pgSQL"
+        title = "AWS Cost Optimization"
+        tagline = "Python Lambda functions and Terraform pipelines for dynamic resource control, including instance rightsizing, spot-instance usage, and automated environment startup/shutdown."
 
         [[params.projects.list]]
-        title = "Online ink shop"
-        #url = "https://github.com/aerohub/hugo-identity-theme"
-        tagline = "Using *Prestashop* I wrote an online shop to sell printer ink."
+        title = "Infrastructure Automation"
+        tagline = "Ansible-driven stack deployments (Proxmox, Talos, Grafana, Loki, MinIO) with retention and user policies, reducing setup time from days to under an hour."
 
     # Skills section
     [params.skills]
@@ -182,48 +184,24 @@ publishDir = "docs"
         title = "Skills & Proficiency"
 
         [[params.skills.list]]
-        skill = "Java EE"
-        level = "98%"
+        skill = "DevOps & Cloud"
+        level = "AWS (EC2, Batch, Lambda, RDS, Dynamo, S3, IAM), Kubernetes (K3s, Talos, GKE), VMware, Proxmox"
 
         [[params.skills.list]]
-        skill = "Python & PHP"
-        level = "75%"
+        skill = "Python Development & Automation"
+        level = "CLI tools, AWS Boto3, Jinja2 templating, pytest, REST integrations, automation scripts"
 
         [[params.skills.list]]
-        skill = "PostgreSQL & MySQL"
-        level = "90%"
+        skill = "IaC & CI/CD"
+        level = "Terraform, Ansible, Packer, GitLab CI, GitHub Actions, GoCD pipelines"
 
         [[params.skills.list]]
-        skill = "Mongo & Cassandra"
-        level = "80%"
+        skill = "Observability & Ops"
+        level = "Grafana, Loki, InfluxDB, Promtail, log management, retention policies, performance tuning"
 
         [[params.skills.list]]
-        skill = "git"
-        level = "90%"
-
-        [[params.skills.list]]
-        skill = "Docker & AWS"
-        level = "80%"
-
-        [[params.skills.list]]
-        skill = "RabbitMQ"
-        level = "80%"
-
-        [[params.skills.list]]
-        skill = "Elastic search - Kibana"
-        level = "70%"
-
-        [[params.skills.list]]
-        skill = "Apache Flink & Kafka"
-        level = "70%"
-
-        [[params.skills.list]]
-        skill = "Javascript & jQuery"
-        level = "60%"
-
-        [[params.skills.list]]
-        skill = "Ruby & Node.js"
-        level = "60%"
+        skill = "Soft Skills"
+        level = "Analytical mindset, strong documentation habits, collaborative problem solver"
 
 
     # Footer section

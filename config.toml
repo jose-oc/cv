@@ -32,7 +32,7 @@ publishDir = "docs"
     # Profile section
     [params.profile]
         name = "Jose Ortiz"
-        tagline = "DevOps Engineer"
+        tagline = "DevOps/Platform Engineer"
         avatar = "profile.png"
 
     # Contact section

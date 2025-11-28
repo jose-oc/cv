@@ -195,24 +195,24 @@ publishDir = "docs"
         title = "Skills & Proficiency"
 
         [[params.skills.list]]
-        skill = "DevOps & Cloud"
-        level = "AWS (EC2, Batch, Lambda, RDS, Dynamo, S3, IAM), Kubernetes (K3s, Talos, GKE), VMware, Proxmox"
+        skill = "DevOps & Cloud - AWS (EC2, Batch, Lambda, RDS, Dynamo, S3, IAM), Kubernetes (K3s, Talos, GKE), VMware, Proxmox"
+        level = "70%"
 
         [[params.skills.list]]
-        skill = "Python Development & Automation"
-        level = "CLI tools, AWS Boto3, Jinja2 templating, pytest, REST integrations, automation scripts"
+        skill = "Python/Go Development & Automation - CLI tools, AWS Boto3, Jinja2 templating, pytest, REST integrations, automation scripts"
+        level = "80%"
 
         [[params.skills.list]]
-        skill = "IaC & CI/CD"
-        level = "Terraform, Ansible, Packer, GitLab CI, GitHub Actions, GoCD pipelines"
+        skill = "IaC & CI/CD - Terraform, Ansible, Packer, GitLab CI, GitHub Actions, GoCD pipelines"
+        level = "85%"
 
         [[params.skills.list]]
-        skill = "Observability & Ops"
-        level = "Grafana, Loki, InfluxDB, Promtail, log management, retention policies, performance tuning"
+        skill = "Observability & Ops - Grafana, Loki, InfluxDB, Promtail, log management, retention policies, performance tuning"
+        level = "75%"
 
         [[params.skills.list]]
-        skill = "Soft Skills"
-        level = "Analytical mindset, strong documentation habits, collaborative problem solver"
+        skill = "Soft Skills - Analytical mindset, strong documentation habits, collaborative problem solver"
+        level = "90%"
 
 
     # Footer section

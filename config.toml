@@ -126,7 +126,7 @@ publishDir = "docs"
         enable = true
         icon = "fa-user"
         title = "Career Profile"
-        summary = "DevOps Engineer with 5+ years of experience building automation, cloud infrastructure, and Python-based tooling for scalable, reliable systems. Bridges development and operations by creating CLI tools, Lambda functions, and CI/CD integrations that simplify workflows and eliminate manual steps. Experienced with AWS, Kubernetes, Terraform, Ansible, and Python — passionate about automating everything from infrastructure provisioning to documentation generation."
+        summary = "DevOps Engineer with 5+ years of experience building automation, cloud infrastructure, and Python-based tooling for scalable, reliable systems. Drawing on 20 years of prior experience as a developer, I effectively bridge development and operations by creating CLI tools, Lambda functions, and CI/CD integrations that simplify workflows and eliminate manual steps. Experienced with AWS, Kubernetes, Terraform, Ansible, and Python — passionate about automating everything from infrastructure provisioning to documentation generation."
 
     # Experiences section
     [params.experiences]

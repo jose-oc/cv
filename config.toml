@@ -48,7 +48,7 @@ publishDir = "docs"
         [[params.contact.list]]
         class = "email"
         icon = "fa-envelope"
-        url = "mailto: jose.oc+developer@gmail.com"
+        url = "mailto:jose.oc@gmail.com"
         title = "jose.oc@gmail.com"
 
         # [[params.contact.list]]
@@ -81,14 +81,14 @@ publishDir = "docs"
         title = "Education"
 
         [[params.education.list]]
-        degree = "Bachelor's Degree in Computer Engineering"
-        college = "University of Málaga"
-        #dates = "2000 - 2005"
+        degree = "Master’s Degree in Secondary Education"
+        college = "Universidad de Málaga"
+        dates = "2011 - 2012"
 
         [[params.education.list]]
-        degree = "Master's Degree in Secondary Education"
-        college = "University of Málaga"
-        #dates = "2011 - 2012"
+        degree = "Bachelor’s Degree in Computer Engineering"
+        college = "Universidad de Málaga"
+        dates = "2000 - 2005"
 
     # Languages section
     [params.language]
@@ -126,7 +126,7 @@ publishDir = "docs"
         enable = true
         icon = "fa-user"
         title = "Career Profile"
-        summary = "20+ years working in It, working the latest 5 as DevOps Engineer building automation, cloud infrastructure, and Python-based tooling for scalable, reliable systems. Bridges development and operations by creating CLI tools, Lambda functions, and CI/CD integrations that simplify workflows and eliminate manual steps. Experienced with AWS, Kubernetes, Terraform, Ansible, and Python — passionate about automating everything from infrastructure provisioning to documentation generation."
+        summary = "DevOps Engineer with 5+ years of experience building automation, cloud infrastructure, and Python-based tooling for scalable, reliable systems. Bridges development and operations by creating CLI tools, Lambda functions, and CI/CD integrations that simplify workflows and eliminate manual steps. Experienced with AWS, Kubernetes, Terraform, Ansible, and Python — passionate about automating everything from infrastructure provisioning to documentation generation."
 
     # Experiences section
     [params.experiences]
@@ -138,13 +138,30 @@ publishDir = "docs"
         position = "DevOps / Platform Engineer"
         dates = "Nov 2022 - Present"
         company = "NEP Group, Málaga (Spain)"
-        details = "Automated deployment and configuration of infrastructure and observability stacks on Kubernetes using Ansible, reducing setup time from days to under an hour. Developed Python scripts integrated into GitHub Actions to sync Docker images and Helm charts with a private Google Artifact Registry, ensuring reliable artifact availability. Created Python CLI tools to automate internal workflows: syncing Ansible inventory with 1Password and generating scaffolding. Generating Confluence documentation from HTML templates and inventory variables. Designed and implemented cost-optimization automation for AWS (EC2, ECS, RDS, and Lambda): instance rightsizing, spot-instance usage, automated environment startup/shutdown. Built runbooks for recurring incidents, improving on-call efficiency and response consistency. Managed 30+ distributed datacenters, each with multiple Kubernetes nodes and VMs, ensuring observability and stability across all environments."
+        details = """
+- Automated deployment and configuration of infrastructure and observability stacks (**Grafana, Loki, InfluxDB, Promtail, Telegraf, MinIO**) on Kubernetes using **Ansible**, reducing setup time from days to **under an hour**.
+- Developed Python scripts integrated into **GitHub Actions** to sync Docker images and Helm charts with a private **Google Artifact Registry**, ensuring reliable artifact availability.
+- Created Python CLI tools to automate internal workflows:
+  - Syncing **Ansible inventory** with **1Password** and generating scaffolding.
+  - Generating **Confluence documentation** from HTML templates and inventory variables.
+- Designed and implemented **cost-optimization automation** for AWS (EC2, ECS, and Lambda): instance rightsizing, spot-instance usage, automated environment startup/shutdown.
+- Built runbooks for recurring incidents, improving on-call efficiency and response consistency.
+- Managed 30+ distributed datacenters, each with multiple Kubernetes nodes and VMs, ensuring observability and stability across all environments.
+"""
 
         [[params.jobs.list]]
         position = "Lead Developer / DevOps Engineer"
         dates = "Mar 2015 - Nov 2022"
         company = "Piksel Inc, Málaga (Spain)"
-        details = "Led a cross-functional team of six developers and DevOps engineers building a distributed Python-based workflow platform (similar to N8N) to process large-scale media workloads on AWS. Designed modular Python libraries for transcoding videos, generating metadata, processing subtitles, and analyzing video content — connected via standardized inputs/outputs for composable workflows. Used pytest for testing, boto3 for AWS interactions, and Terraform for infrastructure provisioning. Developed a Lambda function to manage AWS RDS startup/shutdown via schedule or manual triggers from GoCD pipelines, optimizing costs and reducing idle usage. Created and maintained Terraform CI/CD pipelines using GoCD and GitLab CI for continuous infrastructure delivery. Collaborated with developers to integrate observability and logging, leveraging ElasticSearch/Kibana for debugging and performance insights. Achieved 15% operational cost reduction by automating provisioning and improving resource utilization."
+        details = """
+- Led a cross-functional team of six developers and DevOps engineers building a distributed **Python-based workflow platform** (similar to N8N) to process large-scale media workloads on AWS.
+- Designed modular **Python libraries (“steps”)** for transcoding videos, generating metadata, processing subtitles, and analyzing video content — connected via standardized inputs/outputs for composable workflows.
+- Used **pytest** for testing, **boto3** for AWS interactions, and **Terraform** for infrastructure provisioning.
+- Developed a **Lambda function** to manage AWS RDS startup/shutdown via schedule or manual triggers from GoCD pipelines, optimizing costs and reducing idle usage.
+- Created and maintained **Terraform CI/CD pipelines** using GoCD and GitLab CI for continuous infrastructure delivery.
+- Collaborated with developers to integrate observability and logging, leveraging ElasticSearch/Kibana for debugging and performance insights.
+- Achieved **15% operational cost reduction** by automating provisioning and improving resource utilization.
+"""
 
         [[params.jobs.list]]
         position = "Software Developer / Backend Engineer"
